@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/timer.dir/test.cpp.o  -o timer -lpthread 

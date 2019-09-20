@@ -1,0 +1,51 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/bizehao/CLionProjects/timer/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_8b384/fast 
+/usr/bin/make -f CMakeFiles/cmTC_8b384.dir/build.make CMakeFiles/cmTC_8b384.dir/build
+make[1]: 进入目录“/home/bizehao/CLionProjects/timer/cmake-build-debug/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_8b384.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_8b384.dir/CheckSymbolExists.c.o   -c /home/bizehao/CLionProjects/timer/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_8b384
+/usr/local/devtools/clion-2019.1.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8b384.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_8b384.dir/CheckSymbolExists.c.o  -o cmTC_8b384 
+/usr/bin/ld: CMakeFiles/cmTC_8b384.dir/CheckSymbolExists.c.o: in function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+collect2: 错误：ld 返回 1
+make[1]: *** [CMakeFiles/cmTC_8b384.dir/build.make:87：cmTC_8b384] 错误 1
+make[1]: 离开目录“/home/bizehao/CLionProjects/timer/cmake-build-debug/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_8b384/fast] 错误 2
+
+File /home/bizehao/CLionProjects/timer/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/bizehao/CLionProjects/timer/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_94fca/fast 
+/usr/bin/make -f CMakeFiles/cmTC_94fca.dir/build.make CMakeFiles/cmTC_94fca.dir/build
+make[1]: 进入目录“/home/bizehao/CLionProjects/timer/cmake-build-debug/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_94fca.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_94fca.dir/CheckFunctionExists.c.o   -c /usr/local/devtools/clion-2019.1.4/bin/cmake/linux/share/cmake-3.14/Modules/CheckFunctionExists.c
+Linking C executable cmTC_94fca
+/usr/local/devtools/clion-2019.1.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_94fca.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_94fca.dir/CheckFunctionExists.c.o  -o cmTC_94fca -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: 错误：ld 返回 1
+make[1]: *** [CMakeFiles/cmTC_94fca.dir/build.make:87：cmTC_94fca] 错误 1
+make[1]: 离开目录“/home/bizehao/CLionProjects/timer/cmake-build-debug/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_94fca/fast] 错误 2
+
+
